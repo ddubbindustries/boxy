@@ -1,0 +1,26 @@
+{
+  "name": "boxy",
+  "author": "ddubb",
+  "description": "",
+  "version": "",
+  "private": false,
+  "extName": null,
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=6.0.0 <7.0.0"
+  },
+  "homepage": "",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node server/app.js",
+    "test": "./node_modules/.bin/wct",
+    "build": "./scripts/build.sh"
+  },
+  "dependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}

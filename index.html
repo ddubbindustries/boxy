@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Boxy</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/lodash/4/lodash.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+  <div class="table">
+  <div class="row" ng-repeat="(y,row) in table track by $index">
+    <div class="square" 
+      ng-repeat="(x,cell) in row track by $index"
+      ng-click="click(cell,x,y)"
+      ng-class="cell.type"
+      ng-style="cell.style"
+    >
+      {{cell.health | number:0}}
+    </div>
+  </div>
+  </div>
+  
+  <div
+    class="inventory"
+    ng-repeat="(i, item) in inventory"
+    ng-click="setCurrentType(i)"
+    ng-class={selected:currentType==i}
+  >
+    {{item.type}} 
+    <div ng-class="item.type" class="square">{{item.qty}}</div>
+  </div>
+  
+  <div class="controls">
+    <button ng-click="reset()">reset</button>
+    <button ng-click="step()">step</button>
+    <button ng-click="togglePlay()">play/pause</button>
+    {{getClock()}} {{play}}
+  </div>
+  
+  </body>
+</html>

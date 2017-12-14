@@ -1,0 +1,76 @@
+body {
+  font: 10px/14px sans-serif;
+}
+.table {
+  display: table;
+}
+.row {
+  margin:0;
+  padding: 0;
+  border: 1px solid gold;
+  display: table-row;
+}
+.square {
+  background: #ccc;
+  display: table-cell;
+  width: 15px;
+  height: 15px;
+  padding:0px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+.table .square {
+  border: 1px solid #ddd;
+  border-width: 0 1px 1px 0;
+}
+.square:hover, .selected {
+  opacity: 1.0;
+}
+.inventory, .controls {
+  margin-top: 10px;
+}
+.inventory {
+  opacity: 0.6;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+}
+.inventory .square {
+  display: inline-block;
+}
+.selected {
+  opacity: 1.0;
+}
+.hero {
+  background: lightGreen;
+  color: darkGreen;
+}
+.bot {
+  background: #666;
+}
+.wood {
+  background: tan;
+}
+.rubber {
+  background: plum;
+}
+.glue {
+  background: yellow;
+  color: brown;
+}
+.brick {
+  background: salmon;
+}
+.glass {
+  background: cornflowerBlue;
+}
+.magnet {
+  background: teal;
+}
+.mank {
+  background: orange;
+}
+.dead {
+  background: black;
+}
